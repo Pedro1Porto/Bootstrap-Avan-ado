@@ -43,7 +43,47 @@
             <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
         </div>
     </div>
-</div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <div class="carousel carousel-fade slide" data-bs-ride="carousel" id="carousel-ex">
+            <div class="carousel-inner border border-dark border-2">
+                <div data-bs-interval="4000" class="carousel-item active">
+                    <img src="https://placehold.co/180x180" class="d-block w-100">
+                    <div class="carousel-caption text-dark">
+                        <h2>Primeira Imagem</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="4000" class="carousel-item">
+                    <img src="https://placehold.co/150x150" class="d-block w-100">
+                    <div class="carousel-caption text-dark">
+                        <h2>Segunda Imagem</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="4000" class="carousel-item">
+                    <img src="https://placehold.co/120x120" class="d-block w-100">
+                    <div class="carousel-caption text-dark">
+                        <h2>Terceira Imagem</h2>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" data-bs-slide="prev" class="carousel-control-prev carousel-dark" data-bs-target="#carousel-ex">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button type="button" data-bs-slide="next" class="carousel-control-next carousel-dark" data-bs-target="#carousel-ex">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+            <div class="carousel-indicators carousel-dark">
+                <button data-bs-target="#carousel-ex" type="button" data-bs-slide-to="0" class="active"></button>
+                <button data-bs-target="#carousel-ex" type="button" data-bs-slide-to="1"></button>
+                <button data-bs-target="#carousel-ex" type="button" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
 
     <script src="./lib/bootstrap.bundle.min.js"></script>
 </body>
