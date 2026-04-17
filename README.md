@@ -17,7 +17,7 @@ Breve descrição do projeto. Explique em 1–2 frases o que ele faz e qual o ob
 
 ## 📸 Demonstração
 
-![Preview do Projeto](./assets/preview.png)
+![Esnupi](./We_Love_Snoopy.jpeg)
 
 ---
 
