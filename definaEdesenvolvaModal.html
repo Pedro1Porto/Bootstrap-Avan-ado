@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07/04</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+    <!--Modal é um pop up, que aqui aparece após clicar num botão-->
+
+    
+    <br><br><br>
+
+    <!--agora faremos uma modal com botao de confirmar e outro de cancelar-->
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exemplo-modal">
+        Abrir Modal
+    </button>
+    <!--Em default, quando clica-se no fundo, a modal fecha sozinha. Porém, quando adiciona-se "data-bs-backdrop='static', a modal continuará aparecendo"-->
+    <div class="modal" id="exemplo-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Modal é divido em cabecalho, corpo e rodape-->
+                <!--Agora é cabecalho-->
+                <div class="modal-header">
+                    <h5>Título da Modal</h5>
+                    <!--o botao por si só, não fechara sozinho, somente adicionado-o e colocando a classe de 'btn-close', mas fará sua função ao colocar o data-bs-dismiss='modal'-->
+                    <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                </div>
+                <!--Agora é corpo-->
+                <div class="modal-body">
+                    <p>
+                        lorem ipsum, dolor sit amet consectetur adpiscing elit.
+                    </p>
+                </div>
+                <!--Por fim, o rodapé-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        //somente funcionara quando todo o documento HTML for carregado
+        document.addEventListener('DOMContentLoaded', function(){
+            const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+            setTimeout(function(){
+                modalExemplo.show();
+            }, 3000);
+        })
+    </script>
+</body>
+</html>
