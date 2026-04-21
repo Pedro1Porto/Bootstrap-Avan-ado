@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21/04</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+</head>
+<body>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-exemplo">
+        Abrir Modal Estática
+    </button>
+
+    <div class="modal" id="modal-exemplo" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Título da Modal</h5>
+                </div>
+
+                <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                </div>
+
+                <div class="modal-footer">
+                    <h1 class="h5">Rodapé da modal</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modal-exemplo2">
+        Abrir Modal com Botão
+    </button>
+
+    <div class="modal" id="modal-exemplo2" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Título da Modal</h5>
+                    <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                </div>
+
+                <div class="modal-footer">
+                    <h1 class="h5">Rodapé da modal</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#modal-exemplo3">
+        Abrir Modal com Confimar e Recusar
+    </button>
+
+    <div class="modal" id="modal-exemplo3" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Título da Modal</h5>
+                </div>
+
+                <div class="modal-body">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        //quando o documento tiver pronto
+        document.addEventListener('DOMContentLoaded', function(){
+            //criar a modal através do bootstrap
+            const modalExemplo = new bootstrap.Modal('#modal-exemplo3'); // remete a criação de modal (especifica qual é o modal através do ID) para a variável
+            setTimeout(function(){//colocamos o que irá acontecer depois de determinada espera
+                modalExemplo.show(); //mostra a variavel, que antes foi remetida a criação de modal
+            }, 1000)//tempo que o javascript irá demorar a realizar os códigos
+        })
+    </script>
+</body>
+</html>
