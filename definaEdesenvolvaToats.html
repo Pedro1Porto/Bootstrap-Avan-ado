@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22/04</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        section{
+            height: 100vh;
+            background-color: #ccc;
+            padding-top: 69.11px;
+        }
+
+        .navbar-nav .nav-link.active{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="sticky-top bg-secondary" id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+        <div class="container">
+            <h1>Título do Site</h1>
+            <button type="button" class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="nav navbar-nav nav-pills">
+                    <li class="nav-item">
+                        <a href="#inicio" class="nav-link text-center active">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#produtos" class="nav-link text-center">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#promocoes" class="nav-link text-center">Promoções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link text-center">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+            <button type="button" class="btn btn-warning position-relative" id="btn-checar-emails">
+                Checar caixa de mensagens
+                Alerts <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
+            </button>
+        </div>
+        </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <h2>Início</h2>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+        </section>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div data-bs-autohide="false" class="toast" id="mensagens-alerta">
+            <header class="toast-header">
+                <strong>Importante</strong>
+            </header>
+            <div class="toast-body">
+                Você tem 10 mensagens não lidas.
+            </div>
+            <div class="mt-2 p-2 border-top">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="toast">
+                    Fechar</button>
+                </div>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        const ativadorToast = document.getElementById('btn-checar-emails');
+        const mensagem = document.getElementById('mensagens-alerta');
+        //para não ser disparado a qualquer momento, criamos uma condição somente para quando o botão for clicado
+        if(ativadorToast){
+            ativadorToast.addEventListener('click', function(){//caso ouvir um clique, terá o seguinte retorno:
+                const toast = new bootstrap.Toast(mensagem) //cria a mensagem
+                toast.show(); //e mostra
+            })
+        }
+    </script>
+</body>
+</html>
